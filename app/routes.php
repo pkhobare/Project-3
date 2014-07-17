@@ -13,5 +13,14 @@
 
 Route::get('/', function()
 {
-	return View::make('hello');
+	return View::make('index');
+});
+
+use Badcow\LoremIpsum;
+Route::get('/loremipsum', function()
+{
+    $generator = new LoremIpsum\Generator();
+    $paragraphs = $generator->getParagraphs(5);
+    
+	return View::make('loremipsum')->with('paragraph', $paragraphs);
 });
