@@ -1,3 +1,10 @@
 <h1> Lorem Ipsum output</h1>
 
-<?php echo $paragraphs;?><br>
+<?php 
+
+foreach($paragraph as $para)
+{
+    echo $para.'<br><br><br>';  
+}
+
+?>
